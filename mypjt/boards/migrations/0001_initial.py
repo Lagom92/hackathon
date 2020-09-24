@@ -19,15 +19,14 @@ class Migration(migrations.Migration):
                 ('country', models.CharField(max_length=50)),
                 ('name', models.CharField(max_length=100)),
                 ('photo', models.CharField(max_length=200)),
-                ('info', models.TextField()),
             ],
         ),
         migrations.CreateModel(
             name='Comment',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('title', models.CharField(max_length=150)),
                 ('contents', models.TextField()),
-                ('created_at', models.DateField()),
                 ('landmark', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='comment', to='boards.landmark')),
             ],
         ),

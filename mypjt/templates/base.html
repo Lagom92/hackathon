@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+{% load static %}
+=======
 {%load static%}
 
+>>>>>>> 0a7451c1ec55565ec5a90905d8e1fc356d04653a
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +13,19 @@
     <meta name="author" content="">
     <title>여기 어때</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<<<<<<< HEAD
+
+    <!-- 동적 지도 이미지 -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+    src="https://maps.googleapis.com/maps/api/js?key={{key}}&callback=initMap&libraries=&v=weekly"
+    defer
+    ></script>
+    <link rel="stylesheet" href="{% static 'css/map.css' %}">
+
+
+
+=======
     
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <link rel="icon" href="https://www.flaticon.com/svg/static/icons/svg/3127/3127404.svg">
@@ -22,6 +39,7 @@
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6f95751f58.js" crossorigin="anonymous"></script>
  
+>>>>>>> 0a7451c1ec55565ec5a90905d8e1fc356d04653a
 </head>
 <body>
 
@@ -36,6 +54,22 @@
         </form>
         
     </nav>
+<<<<<<< HEAD
+
+        
+    {% block body %}
+    {% endblock %}
+
+
+    <!-- 푸터 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <div class="d-flex justify-content-center">
+            <p>푸터ㅓㅓ</p>
+        </div>
+    </nav>
+    <script src="{% static 'js/map.js' %}"></script>
+=======
         
         {% block body %}
         {% endblock %}
@@ -90,6 +124,7 @@
   <link href="{%static 'vender/js/bootstrap.bundle.min.js' %}" rel="stylesheet"> -->
    
 
+>>>>>>> 0a7451c1ec55565ec5a90905d8e1fc356d04653a
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
