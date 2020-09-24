@@ -8,7 +8,6 @@ def main(request):
 
 
 def landmark(request):
-
     if request.method == "POST":
         country = request.POST['country']
         landmarks = Landmark.objects.filter(country__contains=country)
@@ -31,6 +30,9 @@ def detail(request, id):
     comments = landmark.comment.all()
 
     context = {
+        'country': landmark.country,
+        'photo': landmark.photo,
+        'info': landmark.info,
         'landmark': landmark,
         'comments': comments,
     }

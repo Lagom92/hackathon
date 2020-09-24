@@ -4,7 +4,15 @@
 <h1>landmark</h1>
 <h2>{{country}}</h2>
 {% for landmark in landmarks %}
-    {{landmark.name}}
+    <hr>
+    <img src="{{landmark.photo}}" alt="{{landmark.name}} 이미지">
+    <p>{{landmark.name}}</p>
+    <p>
+        <a href="{% url 'detail' landmark.id %}">
+            <button type="button" class="btn btn-primary btn-sm">detail</button>
+        </a>
+    </p>
+    <span>{{landmark.info}}</span>
 {% endfor %}
 
 {% endblock %}
