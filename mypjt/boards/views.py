@@ -26,3 +26,13 @@ def landmark(request):
     return redirect('main')
 
 
+def detail(request, id):
+    landmark = Landmark.objects.get(id=id)
+    comments = landmark.comment.all()
+
+    context = {
+        'landmark': landmark,
+        'comments': comments,
+    }
+
+    return render(request, 'detail.html', context)

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<h1>detail</h1>
+
+<h3>{{landmark}}</h3>
+
+{% for comment in comments %}
+    {{comment.content}}
+{% endfor %}
+
+{% endblock %}
