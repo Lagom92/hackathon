@@ -40,7 +40,6 @@ def detail(request, id):
     context = {
         'country': landmark.country,
         'photo': landmark.photo,
-        'info': landmark.info,
         'landmark': landmark,
         'comments': comments,
         'key': key,
