@@ -1,0 +1,10 @@
+{% extends 'base.html '%}
+{% block body %}
+
+<h1>landmark</h1>
+<h2>{{country}}</h2>
+{% for landmark in landmarks %}
+    {{landmark.name}}
+{% endfor %}
+
+{% endblock %}

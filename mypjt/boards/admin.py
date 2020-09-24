@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Landmark, Comment
 
-# Register your models here.
+admin.site.register(Landmark)
+admin.site.register(Comment)
