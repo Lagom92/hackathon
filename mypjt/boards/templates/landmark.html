@@ -1,18 +1,25 @@
 {% extends 'base.html '%}
 {% block body %}
 
-<h1>landmark</h1>
-<h2>{{country}}</h2>
-{% for landmark in landmarks %}
-    <hr>
-    <img src="{{landmark.photo}}" alt="{{landmark.name}} 이미지">
-    <p>{{landmark.name}}</p>
-    <p>
-        <a href="{% url 'detail' landmark.id %}">
-            <button type="button" class="btn btn-primary btn-sm">detail</button>
-        </a>
-    </p>
-    <span>{{landmark.info}}</span>
-{% endfor %}
+<h1>landmark</h1><br>
+<h2 style='font-family: "GyeonggiBatang"; text-align: center;'>{{country}}</h2><hr style="width: 200px;"><br>
+    <div class="row border-dark my-3">        
+        {% for landmark in landmarks %}            
+        <div class=" col-md-4 col-lg-3 my-3" >                
+            <div class="d-flex justify-content-center mt-4">                     
+                <a href="{% url 'detail' landmark.id %}">                        
+                    <img src="{{landmark.photo}}"class="card-img-top" alt="..." style="height:305px; width:300px" id="mainImg" >                    
+                </a>                
+            </div>                
+            <div class="card-body">                    
+                <h6 class="card-title text-center" >
+                    <strong>{{landmark.name}}</strong>
+                </h6>             
+            <hr>                
+        </div>            
+    </div>     
+    {% endfor %}             
+</div>
+
 
 {% endblock %}

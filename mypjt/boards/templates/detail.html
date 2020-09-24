@@ -1,33 +1,29 @@
 {% extends 'base.html' %}
+{%load static%}
 {% block body %}
 
-<h1>detail</h1>
+<br><br><br>
+<h3 style='font-family: "GyeonggiBatang"; text-align: center;'>{{landmark}}</h3><hr style="width: 200px;">
+<p style='font-family: "GyeonggiBatang"; text-align: center;'>{{country}}</p><br>
 
-<!-- 구글 정적 이미지 -->
-<!-- <img 
-    src="https://maps.googleapis.com/maps/api/staticmap?center={{landmark}}&zoom=13&size=600x300&maptype=roadmap&key={{key}}" 
-    alt="{{landmark}} 지도 이미지"> -->
-
-
-<div>
-    랜드마크 정보
-    <h3>{{landmark}}</h3>
-    <img src="{{photo}}" alt="">
-    <p>{{country}}</p>
-    <span>{{info}}</span>
+<div class='container'>
+    <img style='widows: 500px; height: 500px; margin-right:30px'src="{{photo}}" alt="">
+    <img 
+    src="https://maps.googleapis.com/maps/api/staticmap?center={{landmark}}&zoom=13&size=500x500&maptype=roadmap&key={{key}}" 
+    alt="{{landmark}} 지도 이미지">
+    <img style="margin-left: 350px; margin-top: 50px;" src="{% static 'img/이탈리아.png' %}"  alt=""> 
 </div>
 
-<!-- google map -->
-<div id="map"></div>
 
-<div class='mt-4'>
-    <h3>워드 클라우드</h3>
-</div>
+<!-- <div id="aabb">
+    <img src="../static/img/프랑스.png"  alt="">
+</div> -->
 
 <br>
 <hr>
 <br>
-<h3>댓글</h3>
+<div class='container'>
+<h3>Opinion</h3>
 
 
 {% for comment in comments %}
@@ -36,5 +32,5 @@
     <p>{{comment.created_at}}</p>
     
 {% endfor %}
-
+</div>
 {% endblock %}
