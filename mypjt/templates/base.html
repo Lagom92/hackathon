@@ -1,11 +1,19 @@
+<<<<<<< HEAD
 {% load static %}
+=======
+{%load static%}
+
+>>>>>>> 0a7451c1ec55565ec5a90905d8e1fc356d04653a
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
     <title>여기 어때</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<<<<<<< HEAD
 
     <!-- 동적 지도 이미지 -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
@@ -17,19 +25,36 @@
 
 
 
+=======
+    
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="icon" href="https://www.flaticon.com/svg/static/icons/svg/3127/3127404.svg">
+    <!-- 
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script> -->
+
+    <!-- Custom styles for this template -->
+    <link href="{%static 'css/landing-page.css' %}" rel="stylesheet">
+    <link href="{%static 'css/landing-page.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6f95751f58.js" crossorigin="anonymous"></script>
+ 
+>>>>>>> 0a7451c1ec55565ec5a90905d8e1fc356d04653a
 </head>
 <body>
+
     <!-- 헤더 -->
     <nav class="navbar navbar-light bg-light fixed-top">
         <a class="navbar-brand" href="{% url 'main' %}">여기 (어떻긴 뭘) 어때</a>
 
         <form class="form-inline" action="{% url 'landmark' %}" method="POST">
             {% csrf_token %}
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="country" required="required">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <input class="form-control mr-sm-2" type="search" placeholder="나라를 입력하세요" aria-label="Search" name="country" required="required">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Go!</button>
         </form>
         
     </nav>
+<<<<<<< HEAD
 
         
     {% block body %}
@@ -44,6 +69,62 @@
         </div>
     </nav>
     <script src="{% static 'js/map.js' %}"></script>
+=======
+        
+        {% block body %}
+        {% endblock %}
+
+
+    <!-- Footer -->
+  <footer class="footer bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+          <ul class="list-inline mb-2"> 
+          </ul>
+          <p class="text-muted small mb-4 mb-lg-0">copyright &copy; 2020 <br> 폐브리즈(lung+breath)</p>
+        </div>
+        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item mr-5">
+              <a href="https://github.com/Lagom92" target='_blank'>
+                <img src="{%static 'img/시영.png'%}" alt="시영">
+              </a>
+            </li>
+            <li class="list-inline-item mr-5">
+              <a href="https://github.com/superjuyeon" target='_blank'>
+                <img src="{%static 'img/주연.png'%}" alt="주연">
+              </a>
+            </li>
+            <li class="list-inline-item mr-5">
+              <a href="https://github.com/kimjinhyuk" target='_blank'>
+                <img src="{%static 'img/진혁.png'%}" alt="진혁">
+              </a>
+            </li>
+            <li class="list-inline-item mr-5">
+              <a href="https://github.com/whiteBerryJ" target='_blank'>
+                <img src="{%static 'img/진균.png'%}" alt="진균">
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://github.com/Choi-joonbeom" target='_blank'>
+                <img src="{%static 'img/준범.png'%}" alt="준범">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{%static 'vender/jquery/jquery.min.js' %}"></script>
+  <script src="{%static 'vender/js/bootstrap.bundle.min.js' %}"></script>
+  <!-- <link href="{%static 'vender/jquery/jquery.min.js' %}" rel="stylesheet">
+  <link href="{%static 'vender/js/bootstrap.bundle.min.js' %}" rel="stylesheet"> -->
+   
+
+>>>>>>> 0a7451c1ec55565ec5a90905d8e1fc356d04653a
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
